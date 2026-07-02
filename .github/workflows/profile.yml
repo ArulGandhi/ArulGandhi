@@ -1,4 +1,4 @@
-name: Update README Stats
+name: Update Profile
 
 on:
   schedule:
@@ -9,11 +9,26 @@ permissions:
   contents: write
 
 jobs:
-  build:
+  update:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
 
+      # 1. Snake
+      - uses: Platane/snk/svg-only@v3
+        with:
+          github_user_name: ${{ github.repository_owner }}
+          outputs: |
+            github-snake.svg
+            github-snake-dark.svg?palette=github-dark
+
+      # 2. Terrain
+      - uses: t1seo/maeul-in-the-sky@v1
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          density: 7
+
+      # 3. Stats
       - name: Generate stats card
         uses: stats-organization/github-readme-stats-action@v2
         with:
@@ -30,10 +45,11 @@ jobs:
           path: profile/top-langs.svg
           token: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Commit cards
+      # 4. Commit everything at once
+      - name: Commit
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add profile/*.svg
-          git commit -m "chore: update stats cards" || exit 0
+          git add github-snake.svg github-snake-dark.svg maeul-in-the-sky-dark.svg maeul-in-the-sky-light.svg profile/
+          git diff --cached --quiet || git commit -m "chore: update profile assets"
           git push
