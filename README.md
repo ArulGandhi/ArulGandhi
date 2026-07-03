@@ -25,20 +25,6 @@
 
 ---
 
-<!-- 💿 DEATH STRANDING TOPOGRAPHIC HEATMAP -->
-<div align="center">
-  <img src="https://death-stranding-profile.2144546224.workers.dev/api/heatmap/ArulGandhi" alt="contribution topography" width="100%">
-</div>
-
----
-
-<!-- 🌊 GITHUB MOTION — wave animation, ocean theme (blue-green-white) -->
-<div align="center">
-  <img src="https://gh-motion-card.vercel.app/api/github-motion?username=ArulGandhi&theme=ocean&animation=wave&shape=diamond&show_legend=true" alt="contribution wave" width="100%">
-</div>
-
----
-
 <!-- ☢️ RBMK REACTOR — animated nuclear reactor of your activity -->
 <div align="center">
   <img src="https://markdown-rbmk.vercel.app/api/badge?username=ArulGandhi&mode=hybrid&theme=dark" width="680" alt="RBMK reactor core">
