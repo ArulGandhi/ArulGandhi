@@ -15,10 +15,10 @@ def main():
     t.gen_text("", 1, count=20)
     t.toggle_show_cursor(False)
     year_now = datetime.now(ZoneInfo("Asia/Kolkata")).strftime("%Y")
-    t.gen_text("ARUL_OS Modular BIOS v1.0.11", 1)
-    t.gen_text(f"Copyright (C) {year_now}, \x1b[31mArul Gandhi Systems\x1b[0m", 2)
+    t.gen_text("Arch Linux Modular BIOS v1.0.11", 1)
+    t.gen_text(f"Copyright (C) {year_now}, \x1b[31mArch Linux ARM\x1b[0m", 2)
     t.gen_text("\x1b[94mGitHub Profile ReadMe Terminal, Rev 1011\x1b[0m", 4)
-    t.gen_text("Intel(R) i5-1245U vPRO - 4.4GHz", 6)
+    t.gen_text("12th Gen Intel(R) Core(TM) i5-1245U vPRO - 4.4GHz", 6)
     t.gen_text(
         "Press \x1b[94mDEL\x1b[0m to enter SETUP, \x1b[94mESC\x1b[0m to cancel Memory Test",
         t.num_rows,
@@ -39,7 +39,7 @@ def main():
     t.gen_typing_text(".....", 1, contin=True)
     t.gen_text("\x1b[96m", 1, count=0, contin=True)
     t.set_font(FONT_FILE_LOGO, 66)
-    os_logo_text = "ARUL OS"
+    os_logo_text = "ARCH LINUX"
     mid_row = (t.num_rows + 1) // 2
     mid_col = (t.num_cols - len(os_logo_text) + 1) // 2
     effect_lines = gifos.effects.text_scramble_effect_lines(
@@ -54,7 +54,7 @@ def main():
     t.clear_frame()
     t.clone_frame(5)
     t.toggle_show_cursor(False)
-    t.gen_text("\x1b[93mArul OS v1.0.11 (tty1)\x1b[0m", 1, count=5)
+    t.gen_text("\x1b[93mArch Linux 6.12.0-arch1-1 (tty1)\x1b[0m", 1, count=5)
     t.gen_text("login: ", 3, count=5)
     t.toggle_show_cursor(True)
     t.gen_typing_text("arulgandhi", 3, contin=True)
@@ -82,29 +82,34 @@ def main():
     t.clear_frame()
     top_languages = [lang[0] for lang in git_user_details.languages_sorted]
     user_details_lines = f"""
-    \x1b[30;101marulgandhi@arch\x1b[0m
-    --------------
-    \x1b[96mOS:      \x1b[93mArch Linux x86_64\x1b[0m
-    \x1b[96mHost:    \x1b[93mThinkPad X1 Carbon Gen 10\x1b[0m
-    \x1b[96mCPU:     \x1b[93mIntel i5-1245U vPRO\x1b[0m
-    \x1b[96mMemory:  \x1b[93m32GB LPDDR5\x1b[0m
-    \x1b[96mWM:      \x1b[93mHyprland\x1b[0m
-    \x1b[96mShell:   \x1b[93mzsh\x1b[0m
-    \x1b[96mEditor:  \x1b[93mneovim\x1b[0m
+    \x1b[30;101marulgandhi@archlinux\x1b[0m
+    --------------------
+    \x1b[96mOS:        \x1b[93mArch Linux x86_64\x1b[0m
+    \x1b[96mHost:      \x1b[93m21CCS2XJ19 (ThinkPad X1 Carbon Gen 10)\x1b[0m
+    \x1b[96mKernel:    \x1b[93mLinux 7.0.14-arch1-1\x1b[0m
+    \x1b[96mPackages:  \x1b[93m1828 (pacman)\x1b[0m
+    \x1b[96mShell:     \x1b[93mfish\x1b[0m
+    \x1b[96mDisplay:   \x1b[93m1920x1200 @ 1.25x in 14\", 60 Hz [Built-in]\x1b[0m
+    \x1b[96mWM:        \x1b[93mHyprland 0.55.4 (Wayland)\x1b[0m
+    \x1b[96mTerminal:  \x1b[93mpi\x1b[0m
+    \x1b[96mCPU:       \x1b[93m12th Gen Intel i5-1245U (4+8) @ 4.40 GHz\x1b[0m
+    \x1b[96mGPU:       \x1b[93mIntel Iris Xe Graphics @ 1.20 GHz\x1b[0m
+    \x1b[96mMemory:    \x1b[93m32GB LPDDR5\x1b[0m
+    \x1b[96mEditor:    \x1b[93mneovim\x1b[0m
 
     \x1b[30;101mFocus:\x1b[0m
-    --------------
+    ------
     \x1b[96msecurity  \x1b[93m|\x1b[96m systems  \x1b[93m|\x1b[96m compilers  \x1b[93m|\x1b[96m ml\x1b[0m
 
     \x1b[30;101mContact:\x1b[0m
-    --------------
+    --------
     \x1b[96mWebsite:    \x1b[93marulgandhi.tech\x1b[0m
     \x1b[96mDiscord:    \x1b[93marulgandhi\x1b[0m
     \x1b[96mSignal:     \x1b[93marulgandhi.69\x1b[0m
     \x1b[96mX:          \x1b[93m@arulgandhi69420\x1b[0m
 
     \x1b[30;101mGitHub Stats:\x1b[0m
-    --------------
+    -------------
     \x1b[96mUser Rating:         \x1b[93m{git_user_details.user_rank.level}\x1b[0m
     \x1b[96mTotal Stars Earned:  \x1b[93m{git_user_details.total_stargazers}\x1b[0m
     \x1b[96mTotal Commits ({int(year_now) - 1}): \x1b[93m{git_user_details.total_commits_last_year}\x1b[0m
