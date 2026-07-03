@@ -25,20 +25,17 @@
 
 ---
 
-<!-- 🌊 GITHUB MOTION — wave animation, ocean theme (blue-green-white) -->
+<!-- 💿 DEATH STRANDING TOPOGRAPHIC HEATMAP -->
 <div align="center">
-  <img src="https://gh-motion-card.vercel.app/api/github-motion?username=ArulGandhi&theme=ocean&animation=wave&shape=diamond&show_legend=true" alt="contribution wave" width="100%">
+  <img src="https://death-stranding-profile.2144546224.workers.dev/api/heatmap/ArulGandhi" alt="contribution topography" width="100%">
 </div>
 
 ---
 
-<!-- 🏔️ ISOMETRIC TERRAIN — your contributions as a living village -->
-<!-- Generated daily by .github/workflows/maeul-sky.yml -->
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="./maeul-in-the-sky-dark.svg">
-  <source media="(prefers-color-scheme: light)" srcset="./maeul-in-the-sky-light.svg">
-  <img alt="GitHub contribution terrain" src="./maeul-in-the-sky-dark.svg" width="100%">
-</picture>
+<!-- 🌊 GITHUB MOTION — wave animation, ocean theme (blue-green-white) -->
+<div align="center">
+  <img src="https://gh-motion-card.vercel.app/api/github-motion?username=ArulGandhi&theme=ocean&animation=wave&shape=diamond&show_legend=true" alt="contribution wave" width="100%">
+</div>
 
 ---
 
