@@ -25,6 +25,13 @@
 
 ---
 
+<!-- 🌊 GITHUB MOTION — wave animation, ocean theme (blue-green-white) -->
+<div align="center">
+  <img src="https://gh-motion-card.vercel.app/api/github-motion?username=ArulGandhi&theme=ocean&animation=wave&shape=diamond&show_legend=true" alt="contribution wave" width="100%">
+</div>
+
+---
+
 <!-- 🏔️ ISOMETRIC TERRAIN — your contributions as a living village -->
 <!-- Generated daily by .github/workflows/maeul-sky.yml -->
 <picture>
