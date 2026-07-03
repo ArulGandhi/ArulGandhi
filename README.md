@@ -25,6 +25,21 @@
 
 ---
 
+<!-- 💻 TERMINAL BOOT SEQUENCE — animated GIF -->
+<!-- Generated daily by .github/workflows/terminal.yml -->
+<div align="center">
+  <img src="./terminal.gif" alt="terminal boot sequence" width="750">
+</div>
+
+---
+
+<!-- ⚽ GITFUT — GitHub as a FIFA-style football card -->
+<div align="center">
+  <a href="https://gitfut.com/ArulGandhi"><img src="https://gitfut.com/ArulGandhi.png" width="320" alt="GitFut card"></a>
+</div>
+
+---
+
 <!-- ☢️ RBMK REACTOR — animated nuclear reactor of your activity -->
 <div align="center">
   <img src="https://markdown-rbmk.vercel.app/api/badge?username=ArulGandhi&mode=hybrid&theme=dark" width="680" alt="RBMK reactor core">

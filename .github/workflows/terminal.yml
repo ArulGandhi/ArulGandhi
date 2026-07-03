@@ -1,0 +1,45 @@
+name: Update Terminal GIF
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '0 1 * * *'  # daily at 01:00 UTC (offset from profile.yml)
+
+permissions:
+  contents: write
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install dependencies
+        run: |
+          sudo apt update && sudo apt install -y ffmpeg
+          python -m pip install --upgrade pip
+          pip install git+https://github.com/x0rzavi/github-readme-terminal.git@main
+
+      - name: Generate GIF
+        working-directory: terminal
+        run: python main.py
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GIFOS_GENERAL_FPS: 13
+          GIFOS_GENERAL_LOOP_COUNT: 0
+          GIFOS_GENERAL_COLOR_SCHEME: "everblush"
+          GIFOS_GENERAL_USER_NAME: "arulgandhi"
+          GIFOS_FILES_OUTPUT_GIF_NAME: "terminal"
+
+      - name: Move output
+        run: |
+          mv terminal/terminal.gif ./terminal.gif
+
+      - name: Commit
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git pull --rebase
+          git add terminal.gif
+          git diff --cached --quiet || git commit -m "chore: update terminal GIF"
+          git push
