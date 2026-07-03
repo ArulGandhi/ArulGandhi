@@ -16,7 +16,7 @@ def main():
     t.toggle_show_cursor(False)
     year_now = datetime.now(ZoneInfo("Asia/Kolkata")).strftime("%Y")
     t.gen_text("Arch Linux Modular BIOS v1.0.11", 1)
-    t.gen_text(f"Copyright (C) {year_now}, \x1b[31mArch Linux ARM\x1b[0m", 2)
+    t.gen_text(f"Copyright (C) {year_now}, \x1b[31mArch Linux\x1b[0m", 2)
     t.gen_text("\x1b[94mGitHub Profile ReadMe Terminal, Rev 1011\x1b[0m", 4)
     t.gen_text("12th Gen Intel(R) Core(TM) i5-1245U vPRO - 4.4GHz", 6)
     t.gen_text(
@@ -54,7 +54,7 @@ def main():
     t.clear_frame()
     t.clone_frame(5)
     t.toggle_show_cursor(False)
-    t.gen_text("\x1b[93mArch Linux 6.12.0-arch1-1 (tty1)\x1b[0m", 1, count=5)
+    t.gen_text("\x1b[93mArch Linux 7.0.14-arch1-1 (tty1)\x1b[0m", 1, count=5)
     t.gen_text("login: ", 3, count=5)
     t.toggle_show_cursor(True)
     t.gen_typing_text("arulgandhi", 3, contin=True)
@@ -91,7 +91,7 @@ def main():
     \x1b[96mShell:     \x1b[93mfish\x1b[0m
     \x1b[96mDisplay:   \x1b[93m1920x1200 @ 1.25x in 14\", 60 Hz [Built-in]\x1b[0m
     \x1b[96mWM:        \x1b[93mHyprland 0.55.4 (Wayland)\x1b[0m
-    \x1b[96mTerminal:  \x1b[93mpi\x1b[0m
+    \x1b[96mTerminal:  \x1b[93mkitty\x1b[0m
     \x1b[96mCPU:       \x1b[93m12th Gen Intel i5-1245U (4+8) @ 4.40 GHz\x1b[0m
     \x1b[96mGPU:       \x1b[93mIntel Iris Xe Graphics @ 1.20 GHz\x1b[0m
     \x1b[96mMemory:    \x1b[93m32GB LPDDR5\x1b[0m
