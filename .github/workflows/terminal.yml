@@ -31,15 +31,14 @@ jobs:
           GIFOS_GENERAL_USER_NAME: "arulgandhi"
           GIFOS_FILES_OUTPUT_GIF_NAME: "terminal"
 
-      - name: Move output
-        run: |
-          mv terminal/terminal.gif ./terminal.gif
-
       - name: Commit
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git stash --include-untracked || true
           git pull --rebase
+          git stash pop || true
+          mv terminal/terminal.gif ./terminal.gif
           git add terminal.gif
           git diff --cached --quiet || git commit -m "chore: update terminal GIF"
           git push
