@@ -94,7 +94,7 @@ def main():
 
     \x1b[30;101mFocus:\x1b[0m
     --------------
-    \x1b[96msecurity  \x1b[93m·\x1b[96m systems  \x1b[93m·\x1b[96m compilers  \x1b[93m·\x1b[96m ml\x1b[0m
+    \x1b[96msecurity  \x1b[93m|\x1b[96m systems  \x1b[93m|\x1b[96m compilers  \x1b[93m|\x1b[96m ml\x1b[0m
 
     \x1b[30;101mContact:\x1b[0m
     --------------
@@ -126,7 +126,7 @@ def main():
     t.gen_text(user_details_lines, 2, 5, count=5, contin=True)
     t.gen_prompt(t.curr_row)
     t.gen_typing_text(
-        "\x1b[92m# programmer — perfectionist, variable, chronically unfocused.",
+        "\x1b[92m# programmer -- perfectionist, variable, chronically unfocused.",
         t.curr_row,
         contin=True,
     )
